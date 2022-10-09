@@ -3,9 +3,8 @@
 https://www.erdcloud.com/d/m8boRe8K52ZSq7uua -> 정하기
 ## Diagram
 
-![culturestamp (1)](https://user-images.githubusercontent.com/64303211/194745813-7ec8d86d-ccad-4c67-9107-56b60ad42678.jpg)
 
-
+![culturestamp](https://user-images.githubusercontent.com/64303211/194745886-6f343fda-83e7-49ae-ab47-ebddaa69ef96.jpeg)
 
 
 ## CONVENTION
