@@ -3,7 +3,7 @@
 https://www.erdcloud.com/d/m8boRe8K52ZSq7uua -> 정하기
 ## Diagram
 
-![culturestamp](https://user-images.githubusercontent.com/64303211/194745216-5cbaef59-4aef-4636-9e22-4107c5d89a3f.jpeg)
+![culturestamp (1)](https://user-images.githubusercontent.com/64303211/194745813-7ec8d86d-ccad-4c67-9107-56b60ad42678.jpg)
 
 
 
