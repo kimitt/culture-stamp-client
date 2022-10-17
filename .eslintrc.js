@@ -1,4 +1,5 @@
 module.exports = {
+  parser: 'babel-eslint',
   env: {
     browser: true,
     es2021: true,
@@ -17,7 +18,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-return-assign': 'error',
     'max-depth': ['error', 2],
-    // 'max-lines-per-function': ['error', 15],
+    //'max-lines-per-function': ['error', 15],
     'import/extensions': ['off'],
     'import/prefer-default-export': 'off',
     'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
