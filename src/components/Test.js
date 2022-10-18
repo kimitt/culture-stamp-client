@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-// import "./Test.css";
+import "./Test.css";
 
 // 임시 이미지 import 
 import Img1 from '../assets/images/1.jpg';
@@ -58,6 +58,13 @@ const Gallery = styled.div`
     flex-wrap: wrap;
     margin: -1rem -1rem;
     padding-bottom: 3rem;
+
+    @supports (display: block) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-gap: 2rem;
+    }
+    
 `
 
 const GalleryItem = styled.div`
