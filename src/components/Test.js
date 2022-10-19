@@ -58,21 +58,29 @@ const Gallery = styled.div`
     flex-wrap: wrap;
     margin: -1rem -1rem;
     padding-bottom: 3rem;
+    
 
-    @supports (display: block) {
+    @supports (display: grid) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-        grid-gap: 2rem;
+        /* grid-gap: 2rem; */
+        width: auto;
+        margin: 0;
     }
     
 `
 
-const GalleryItem = styled.div`
+const GalleryItem = styled.div` 
     position: relative;
     flex: 1 0 22rem;
     margin: 1rem;
     color: #fff;
     cursor: pointer;
+
+    /* @supports (display: grid) {
+       width: auto;
+        margin: 0;
+    } */
 `
 
 const GalleryImage = styled.img`

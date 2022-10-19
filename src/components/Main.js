@@ -12,6 +12,7 @@ import Img7 from '../assets/images/7.jpg';
 import Img8 from '../assets/images/8.jpg';
 import Img9 from '../assets/images/9.jpg';
 
+// 전체 CSS 적용
 const MainBackground = styled.div`
   width:100vw;
   height: 100%;
@@ -20,36 +21,108 @@ const MainBackground = styled.div`
   background: #e5e7eb;
 `;
 
+// header부분
 const Head = styled.header`
-  padding-top: 13vh;
+  position: fixed;
+  top: 0;
+  padding-top: 15vh;
+  z-index: 999;
+  background-color: #e5e7eb;
 `
 
 const Title = styled.span`
+  width: 100vw;
   font-size: 17px;
   font-weight: 600;
 `
+// 카테고리 부분
+const Category = styled.div`
+  display: none;
+  /* justify-content: center; */
+  margin-top: 10px;
+`
+const CategoryList = styled.div`
+  margin-right: 15px;
+`
 const Menu = styled.nav`
-  width: 100vw;
   display: flex;
   justify-content: center;
-  margin: 50px 0 100px 0;
+  width: 100vw;
+  margin: 50px 0 30px 0;
 `;
 
 const MenuList = styled(Link)`
   margin: 0 15px;
-  color: black;
   font-size: 11px;
+  color: black;
   text-decoration: none;
+  &:hover {
+    font-weight: 700;
+  }
+  &:nth-child(1):hover{
+    margin-right: -30px;
+    
+  }
+  &:nth-child(1):hover ${Category}{
+    display: flex;
+    font-weight: 500;
+  }
 `
+
+// // 카테고리 부분
+// const Category = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 10px;
+// `
+// const CategoryList = styled.div`
+//   margin-right: 15px;
+// `
+
+// 카테고리 추가 버튼 부분
+const ButtonSection = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const AddButton = styled(Link)`
+  margin-left: 80%;
+  font-size: 32px;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    font-size: 34px;
+  }
+`
+
+// 메인 부분
 const MainSection = styled.section` 
+  position: relative;
+  top: 280px;
   max-width: 93.5rem;
   margin: 0 auto;
   padding: 0 2rem;
 `
 
-const Button = styled.span`
-  margin-left: 700px;
-  font-size: 0px;
+const Container = styled.div`
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+`
+
+const Thumbnail = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+  padding-bottom: 3rem;
+
+  @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        width: auto;
+        margin: 0;
+    } 
 `
 
 const ThumbnailItem = styled.div`
@@ -66,47 +139,33 @@ const ThumbnailImage = styled.img`
   object-fit: cover;
 `
 
-const AddButton = styled.span`
-  margin-left: 80%;
-  font-size: 32px;
-`
-
-const Category = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: -1rem -1rem;
-  padding-bottom: 3rem;
-`
-
-const Container = styled.div`
-  max-width: 93.5rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-
-`
-
 function Main() {
   return (
     <MainBackground>
       <Head>
         <Title>C U L T U R E S T A M P</Title>
         <Menu>
-          <MenuList to="/category">CATEGORY</MenuList>
+          <MenuList>CATEGORY
+          <Category className='category'>
+            <CategoryList>Movie</CategoryList>
+            <CategoryList>Memo</CategoryList>
+            <CategoryList>Book</CategoryList>
+            <CategoryList>Music</CategoryList>
+          </Category>
+          </MenuList>
           <MenuList to="/date">DATE</MenuList>
           <MenuList to="/todo">TODO</MenuList>
           <MenuList to="/my-page">MYPAGE</MenuList>
           <MenuList to="/login">LOGIN</MenuList>
         </Menu>
-        <div>
+        
+        <ButtonSection>
           <AddButton>+</AddButton>
-        </div>
+        </ButtonSection>
       </Head>
       <MainSection>
-        <div>
-          <Button>+</Button>
-        </div>
         <Container>
-          <Category>
+          <Thumbnail>
             <ThumbnailItem>
               <ThumbnailImage src={Img1} alt="image1"/>
             </ThumbnailItem>
@@ -134,7 +193,7 @@ function Main() {
             <ThumbnailItem>
               <ThumbnailImage src={Img9} alt="image9"/>
             </ThumbnailItem>
-          </Category>
+          </Thumbnail>
         </Container>
       </MainSection>
     </MainBackground>
