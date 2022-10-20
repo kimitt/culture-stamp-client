@@ -4,7 +4,14 @@ import Main from './components/Main';
 import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
-  return <div>Culture Stamp</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+      <GlobalStyle />
+    </BrowserRouter>
+  );
 }
 
 export default App;
