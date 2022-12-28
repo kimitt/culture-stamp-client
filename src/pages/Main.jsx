@@ -176,7 +176,7 @@ function Main() {
           <MenuList to="/date">DATE</MenuList>
           <MenuList to="/todo">TODO</MenuList>
           <MenuList to="/my-page">MYPAGE</MenuList>
-          <MenuList to="/login">LOGIN</MenuList>
+          <MenuList to="/signin">LOGIN</MenuList>
         </Menu>
 
         <ButtonSection>
